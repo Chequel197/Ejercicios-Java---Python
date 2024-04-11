@@ -52,6 +52,5 @@ public class BancariaApp {
     }
             } 
             while(i < 2);
-        
     }
 }

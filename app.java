@@ -4,9 +4,9 @@ public class app {
         System.out.println("Bienvenido a Stream macht");
         System.out.println("Matrix");
         
-      int fechaDeLanzamiento = 1999;
-      boolean incluidoEnElPlan = true;
-      double notaDeLaPelicula = 8.2;
+      // int fechaDeLanzamiento = 1999;
+      // boolean incluidoEnElPlan = true;
+      // double notaDeLaPelicula = 8.2;
 
       double media = (8.2 + 8.6 + 7)/3;
       System.out.println(media);
