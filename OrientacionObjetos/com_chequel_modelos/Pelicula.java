@@ -1,24 +1,23 @@
-package OrientacionObjetos;
-
+package com_chequel_modelos;
 public class Pelicula {
-    String nombre;
-        int fechaDeLanzamiento;
-        int duracionEnMinutos;
-        boolean incluidoEnElPlan;
+    public String nombre;
+        public int fechaDeLanzamiento;
+        public int duracionEnMinutos;
+        public boolean incluidoEnElPlan;
         private double sumaDeLasEvaluciones;
         private int totalDeLasEvaluaciones;
         
-        int getTotalDeLasEvaluaciones(){
+        public int getTotalDeLasEvaluaciones(){
             return totalDeLasEvaluaciones;
         }
 
-        void nuestraFichaTecnica(){
+        public void nuestraFichaTecnica(){
             System.out.println(nombre);
             System.out.println(fechaDeLanzamiento);
             System.out.println(duracionEnMinutos);
             // funcion para mostrar los valores en pantalla con solo llamarla
         }
-        void evalua(double nota){
+        public void evalua(double nota){
             sumaDeLasEvaluciones += nota;
             // aqui se hace la suma de las evalucione que se le hace la pelicula
             totalDeLasEvaluaciones++;
@@ -27,7 +26,7 @@ public class Pelicula {
 
         }
 
-        double calculaMedia(){
+        public double calculaMedia(){
             return sumaDeLasEvaluciones / totalDeLasEvaluaciones;
         }
  }

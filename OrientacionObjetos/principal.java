@@ -1,5 +1,4 @@
-package OrientacionObjetos;
-
+import com_chequel_modelos.*;
 public class principal {
     public static void main(String[] args) {
        Pelicula miPelicula = new Pelicula(); 
@@ -19,11 +18,10 @@ public class principal {
        //aqui usamos una funcion para acortar el codigo y asi evitar la
        //repeticion del codigo y hacer mas reutlizable
 
-       Pelicula otraPelicula = new Pelicula();
-       otraPelicula.nombre = "Matrix";
-       otraPelicula.fechaDeLanzamiento = 2000;
-       otraPelicula.duracionEnMinutos = 180;
-
-       otraPelicula.nuestraFichaTecnica();
+        //Pelicula otraPelicula = new Pelicula();
+        //otraPelicula.nombre = "Matrix";
+        //otraPelicula.fechaDeLanzamiento = 2000;
+        //otraPelicula.duracionEnMinutos = 180;
+        //otraPelicula.nuestraFichaTecnica();
     }
 }

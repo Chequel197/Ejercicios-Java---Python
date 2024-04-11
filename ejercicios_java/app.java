@@ -1,3 +1,4 @@
+package ejercicios_java;
 public class app {
      public static void main(String[] arg) {
      

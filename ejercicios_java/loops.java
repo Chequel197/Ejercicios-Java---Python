@@ -1,3 +1,4 @@
+package ejercicios_java;
 import java.util.Scanner;
 
 public class loops {

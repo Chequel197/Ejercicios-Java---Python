@@ -1,4 +1,4 @@
-package aplicacion;
+package aplicacion_bancaria;
 
 import java.lang.invoke.ConstantBootstraps;
 import java.util.Scanner;
