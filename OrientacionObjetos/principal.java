@@ -1,5 +1,6 @@
+import com_chequel_calculos.FiltroRecomendacion;
+import com_chequel_calculos.calculadoraDeTiempo;
 import com_chequel_modelos.*;
-import com_chequel_modelos.com_chequel_calculos.calculadoraDeTiempo;
 public class principal {
     public static void main(String[] args) {
        Pelicula miPelicula = new Pelicula(); 
@@ -13,24 +14,34 @@ public class principal {
        miPelicula.evalua(7); 
        //se establece el punta de la pelicula y luego se llama funcion para que haga las respectivas sumas
        //luego se muestra en pantalla 
-       System.out.println("suma de la nota: " + miPelicula.getTotalDeLasEvaluaciones());
-       miPelicula.nuestraFichaTecnica(); 
+       miPelicula.nuestraFichaTecnica();
+       System.out.println("suma de la nota: " + miPelicula.getTotalDeLasEvaluaciones()); 
        //aqui usamos una funcion para acortar el codigo y asi evitar la
        //repeticion del codigo y hacer mas reutlizable
 
-
-        serie CasaDragon = new serie();
+        Series CasaDragon = new Series();
         CasaDragon.setNombre("La casa del dragon");
         CasaDragon.setFechaDeLanzamiento(2022);
-        CasaDragon.setDuracionEnMinutos(120);
-        CasaDragon.setTemporadas(20);
-        CasaDragon.setMinutosPorEpisodios(40);
-        CasaDragon.setEpisodiosPorTemporadas(12);
+        CasaDragon.setTemporadas(1);
+        CasaDragon.setMinutosPorEpisodios(50);
+        CasaDragon.setEpisodiosPorTemporadas(10);
         CasaDragon.nuestraFichaTecnica();
         
         calculadoraDeTiempo calculadora = new calculadoraDeTiempo();
         calculadora.incluye(miPelicula);
-        System.out.println(calculadora.getTiempoTotal());
+        calculadora.incluye(CasaDragon);
+        System.out.println("suma de los tiempos: " + calculadora.getTiempoTotal());
+
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+        filtroRecomendacion.filtra(miPelicula);
+        
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombre("la casa");
+        episodio.setSerie(CasaDragon);
+        episodio.setTotalVisualizaciones(300);
+        filtroRecomendacion.filtra(episodio);
+
 
         //Pelicula otraPelicula = new Pelicula();
         //otraPelicula.nombre = "Matrix";

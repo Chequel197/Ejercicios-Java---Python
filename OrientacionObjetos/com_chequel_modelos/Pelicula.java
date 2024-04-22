@@ -1,6 +1,8 @@
 package com_chequel_modelos;
-public class Pelicula extends titulo{
- 
+
+import com_chequel_calculos.Clasificacion;
+
+public class Pelicula extends titulo implements Clasificacion{
     private String director;
     
     /**
@@ -17,4 +19,8 @@ public class Pelicula extends titulo{
         this.director = director;
     }
 
+    @Override
+    public int getClasificacion(){
+        return (int) calculaMedia() / 2;
+    }
 }

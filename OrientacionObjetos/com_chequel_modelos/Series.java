@@ -1,6 +1,6 @@
 package com_chequel_modelos;
 
-public class serie extends titulo{
+public class Series extends titulo{
     private int temporadas;
     private int episodiosPorTemporadas;
     private int minutosPorEpisodios;
