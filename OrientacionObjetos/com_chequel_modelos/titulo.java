@@ -9,6 +9,15 @@ public class titulo {
     private double sumaDeLasEvaluciones;
     private int totalDeLasEvaluaciones;
 
+    public titulo(String nombre, int fechaDeLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento; 
+    }
+
+    // aqui se crea el construcctor, que inicializa la variables que tenemos
+    // en el codigo acortando el codigo, poniendo en este las variables
+    // que son indispensables o que vayamos a usar
+
     public int getTotalDeLasEvaluaciones(){
         return totalDeLasEvaluaciones;
     }

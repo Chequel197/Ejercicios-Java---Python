@@ -1,14 +1,15 @@
+package principal;
+import java.util.ArrayList;
 import com_chequel_calculos.FiltroRecomendacion;
 import com_chequel_calculos.calculadoraDeTiempo;
 import com_chequel_modelos.*;
+
 public class principal {
     public static void main(String[] args) {
-       Pelicula miPelicula = new Pelicula(); 
-       //aqui creamos un objeto utlizando las variables/ caracteristicas que le dimos a Pelicula.java y de esta forma usamos las mismas 
-       //variables para diferentes peliculas y asi nos ahorramos de repetir codigo
- 
-       miPelicula.setNombre("Encanto");
-       miPelicula.setFechaDeLanzamiento(2021); 
+       Pelicula miPelicula = new Pelicula("La casa", 1998); 
+        // aqui se crea un contrucctor con las caracteristicas que estan en titulo asi 
+        // acortando la cantidad de codigo que se escribe 
+        
        miPelicula.setDuracionEnMinutos(120);
        miPelicula.evalua(10);
        miPelicula.evalua(7); 
@@ -19,9 +20,7 @@ public class principal {
        //aqui usamos una funcion para acortar el codigo y asi evitar la
        //repeticion del codigo y hacer mas reutlizable
 
-        Series CasaDragon = new Series();
-        CasaDragon.setNombre("La casa del dragon");
-        CasaDragon.setFechaDeLanzamiento(2022);
+        Series CasaDragon = new Series("casa dragon", 2022);
         CasaDragon.setTemporadas(1);
         CasaDragon.setMinutosPorEpisodios(50);
         CasaDragon.setEpisodiosPorTemporadas(10);
@@ -41,6 +40,17 @@ public class principal {
         episodio.setSerie(CasaDragon);
         episodio.setTotalVisualizaciones(300);
         filtroRecomendacion.filtra(episodio);
+
+        var LuisMiguel = new Pelicula("Historia de luis miguel", 1998);
+        // aqui se usa VAR para no hacer la misma repeticion que se hace, para llamar 
+        // a los diferentes constructores y asi acordar el codigo
+        
+        ArrayList<Pelicula> listasDePeliculas = new ArrayList<>();
+        listasDePeliculas.add(miPelicula);
+        listasDePeliculas.add(LuisMiguel);
+        System.out.println("tamaño de la lista: "+ listasDePeliculas.size());
+        System.out.println("toString de la pelicula: " + listasDePeliculas.get(0).toString());
+
 
 
         //Pelicula otraPelicula = new Pelicula();

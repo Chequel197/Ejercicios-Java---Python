@@ -1,6 +1,11 @@
 package com_chequel_modelos;
 
 public class Series extends titulo{
+    public Series(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento);
+        //TODO Auto-generated constructor stub
+    }
+
     private int temporadas;
     private int episodiosPorTemporadas;
     private int minutosPorEpisodios;
