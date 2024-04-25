@@ -1,5 +1,7 @@
 package principal;
 import java.util.ArrayList;
+import java.util.Collections;
+
 import com_chequel_modelos.*;
 
 public class principalConListas {
@@ -26,7 +28,13 @@ public class principalConListas {
                 Pelicula pelicula = (Pelicula) item;
             System.out.println(pelicula.getClasificacion());
             }
-            
         }
+
+        ArrayList <String> Artistas = new ArrayList<>();
+        Artistas.add("Luismigues");
+        Artistas.add("Juan Gabriel");
+        Artistas.add("Arjona");
+        Collections.sort(Artistas);
+        System.out.println("Lista de artista ordenada: " + Artistas);
     }
 }
